@@ -1,0 +1,12 @@
+type: edu
+custom_name: Encrypted!
+files:
+  - name: src/Main.kt
+    visible: true
+    learner_created: false
+  - name: test/EncryptDecryptTest.java
+    visible: false
+    learner_created: false
+feedback_link: https://hyperskill.org/projects/279/stages/1415/implement#comment
+status: Solved
+record: 4
