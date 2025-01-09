@@ -1,9 +1,12 @@
 package encryptdecrypt
 
-fun main() {
-    val operation = readln()
-    val message = readln()
-    val key = readln().toInt()
+fun main(args: Array<String>) {
+    val parameters = parseArgs(args)
+
+    val operation = parameters["-mode"] ?: "enc"
+    val key = parameters["-key"]?.toInt() ?: 0
+    val message = parameters["-data"] ?: ""
+
     when (operation) {
         "enc" -> encryptMessage(message, key)
         "dec" -> decryptMessage(message, key)
@@ -24,4 +27,10 @@ private fun decryptMessage(ciphertext: String, key: Int) {
         message[index] = (ch.code - key).toChar()
     }
     println(message)
+}
+
+private fun parseArgs(args: Array<String>): MutableMap<String, String> {
+    val result = mutableMapOf<String, String>()
+    for (i in args.indices step 2) result[args[i]] = args[i + 1]
+    return result
 }
