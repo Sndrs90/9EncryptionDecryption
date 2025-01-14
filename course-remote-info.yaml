@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://cogniterra.org/media/attachments/lesson/26876/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Mon, 13 Jan 2025 11:18:02 UTC"
+update_date: "Tue, 14 Jan 2025 10:08:29 UTC"
 stages:
   - id: 1415
     step: 21966
@@ -22,7 +22,7 @@ stages:
     is_completed: true
   - id: 1420
     step: 21971
-    is_completed: false
+    is_completed: true
 topics:
   0:
     - title: Introduction to Kotlin
